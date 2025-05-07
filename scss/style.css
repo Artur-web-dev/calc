@@ -87,7 +87,7 @@ textarea {
   resize: none;
 }
 
-.centered {
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,70 +109,67 @@ textarea {
   background-color: rgba(58, 57, 57, 0.9) !important;
   padding: 15px;
 }
-
-.circle-box {
+.calculator-circle {
   display: grid;
   grid-template-columns: 20px 20px 20px;
   gap: 12px;
 }
-.circle-box:hover img {
+.calculator-circle:hover img {
   display: block;
 }
-.circle-box:hover .circle-box__item_red {
+.calculator-circle:hover .circle-box__item_red {
   cursor: pointer;
 }
-.circle-box:hover .circle-box__item_yellow {
+.calculator-circle:hover .circle-box__item_yellow {
   cursor: pointer;
 }
-.circle-box__item {
+.calculator-circle__item {
   width: 20px;
   height: 20px;
   border-radius: 60px;
 }
-.circle-box__item_red {
+.calculator-circle__item_red {
   background-color: rgb(228, 69, 69);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.circle-box__item_red img {
+.calculator-circle__item_red img {
   display: none;
   width: 12px;
   height: 12px;
 }
-.circle-box__item_yellow {
+.calculator-circle__item_yellow {
   background-color: rgb(255, 208, 0);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.circle-box__item_yellow img {
+.calculator-circle__item_yellow img {
   display: none;
   width: 12px;
   height: 12px;
 }
-.circle-box__item_gray {
+.calculator-circle__item_gray {
   background-color: rgb(112, 110, 110);
 }
-
-.result {
+.calculator-result {
   display: flex;
   justify-content: right;
   margin-top: 75px;
   margin-bottom: 5px;
 }
-.result__number {
+.calculator-result__number {
   font-family: "SF";
   font-size: 52px;
   color: rgb(223, 218, 218);
 }
-
-.values-grid {
+.calculator-values {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px 10px;
 }
-.values-item {
+.calculator-values__item {
   width: 70px;
   height: 70px;
   border-radius: 70px;
@@ -181,34 +178,34 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-.values-item:active {
+.calculator-values__item:active {
   background-color: rgb(185, 185, 185);
 }
-.values-item__signs {
+.calculator-values__item__signs {
   background-color: rgb(240, 143, 16);
 }
-.values-item__signs:active {
+.calculator-values__item__signs:active {
   background-color: rgb(241, 174, 87);
 }
-.values-item__numbers {
+.calculator-values__item__numbers {
   background-color: rgb(112, 112, 112);
 }
-.values-item__numbers:active {
+.calculator-values__item__numbers:active {
   background-color: rgb(161, 155, 147);
 }
-.values-item__text {
+.calculator-values__text {
   color: white;
   font-family: "SF";
   font-size: 30px;
 }
-.values-item__text img {
+.calculator-values__text img {
   width: 40px;
   height: 40px;
   margin-top: 5px;
 }
-.values-item__text_signs {
+.calculator-values__text_signs {
   font-size: 37px;
 }
-.values-item__text_divide {
+.calculator-values__text_divide {
   font-size: 40px;
 }/*# sourceMappingURL=style.css.map */
