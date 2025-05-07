@@ -113,14 +113,16 @@ textarea {
   display: grid;
   grid-template-columns: 20px 20px 20px;
   gap: 12px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .calculator-circle:hover img {
   display: block;
 }
-.calculator-circle:hover .circle-box__item_red {
+.calculator-circle:hover .calculator-circle__item_red {
   cursor: pointer;
 }
-.calculator-circle:hover .circle-box__item_yellow {
+.calculator-circle:hover .calculator-circle__item_yellow {
   cursor: pointer;
 }
 .calculator-circle__item {
@@ -181,17 +183,20 @@ textarea {
 .calculator-values__item:active {
   background-color: rgb(185, 185, 185);
 }
-.calculator-values__item__signs {
-  background-color: rgb(240, 143, 16);
-}
-.calculator-values__item__signs:active {
-  background-color: rgb(241, 174, 87);
-}
-.calculator-values__item__numbers {
+.calculator-values__numbers {
   background-color: rgb(112, 112, 112);
 }
-.calculator-values__item__numbers:active {
+.calculator-values__numbers:active {
   background-color: rgb(161, 155, 147);
+}
+.calculator-values__signs {
+  background-color: rgb(240, 143, 16);
+}
+.calculator-values__signs:active {
+  background-color: rgb(241, 174, 87);
+}
+.calculator-values__signs:active img {
+  background-color: rgb(241, 174, 87);
 }
 .calculator-values__text {
   color: white;
@@ -202,10 +207,4 @@ textarea {
   width: 40px;
   height: 40px;
   margin-top: 5px;
-}
-.calculator-values__text_signs {
-  font-size: 37px;
-}
-.calculator-values__text_divide {
-  font-size: 40px;
 }/*# sourceMappingURL=style.css.map */

@@ -130,11 +130,12 @@ textarea {
 		display: grid;
 		grid-template-columns: 20px 20px 20px;
 		gap: 12px;
+		max-width: fit-content;
 		&:hover {
 			img {
 				display: block;
 			}
-			.circle-box__item {
+			.calculator-circle__item {
 				&_red {
 					cursor: pointer;
 				}
@@ -203,16 +204,19 @@ textarea {
 			&:active {
 				background-color: rgb(185, 185, 185);
 			}
-			&__signs {
-				background-color: rgb(240, 143, 16);
-				&:active {
-					background-color: rgb(241, 174, 87);
-				}
+		}
+		&__numbers {
+			background-color: rgb(112, 112, 112);
+			&:active {
+				background-color: rgb(161, 155, 147);
 			}
-			&__numbers {
-				background-color: rgb(112, 112, 112);
-				&:active {
-					background-color: rgb(161, 155, 147);
+		}
+		&__signs {
+			background-color: rgb(240, 143, 16);
+			&:active {
+				background-color: rgb(241, 174, 87);
+				img {
+					background-color: rgb(241, 174, 87);
 				}
 			}
 		}
@@ -224,12 +228,6 @@ textarea {
 				width: 40px;
 				height: 40px;
 				margin-top: 5px;
-			}
-			&_signs {
-				font-size: 37px;
-			}
-			&_divide {
-				font-size: 40px;
 			}
 		}
 	}
