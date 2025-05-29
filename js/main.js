@@ -1,19 +1,17 @@
 window.addEventListener("DOMContentLoaded", () => {
 	const resultDisplay = document.querySelector(".calculator-result__number");
 	const numberButtons = document.querySelectorAll(".calculator-values__numbers");
+	const acButton = document.querySelector(".calculator-values__item p"); // ищем кнопку с <p> AC
 
 	let currentInput = "0";
 
 	numberButtons.forEach((button) => {
 		button.addEventListener("click", () => {
-			// Найдём текст цифры (если это не картинка)
 			const textElement = button.querySelector(".calculator-values__text");
 
-			// Если это <p> с числом
 			if (textElement && textElement.tagName === "P") {
 				const value = textElement.innerText.trim();
 
-				// Только цифры (0–9)
 				if (/^\d$/.test(value)) {
 					if (currentInput === "0") {
 						currentInput = value;
@@ -25,4 +23,15 @@ window.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	});
+
+	// Обработчик для кнопки AC
+	// Т.к. у AC кнопка с <p> внутри и текст "AC"
+	const acButtonElement = Array.from(document.querySelectorAll(".calculator-values__item p")).find((p) => p.innerText.trim() === "AC");
+
+	if (acButtonElement) {
+		acButtonElement.parentElement.addEventListener("click", () => {
+			currentInput = "0";
+			resultDisplay.textContent = currentInput;
+		});
+	}
 });
